@@ -1,0 +1,55 @@
+﻿@page "/students"
+@inject DataGenerator data
+
+<h3>Students</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Identified</th>
+            <th>EqId</th>
+            <th>Full Name</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Year Level</th>
+            <th>Enrollment Status</th>
+            <th>Has Photo</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var s in students)
+        {
+            <tr>
+                <td>@s.Identifier</td>
+                <td>@s.EqId</td>
+                <td>@s.FullName</td>
+                <td>@s.BirthDate</td>
+                <td>@s.Age</td>
+                <td>@s.Gender</td>
+                <td>@s.YearLevel</td>
+                <td>@s.EnrollmentStatus</td>
+                <td>@s.HasPhoto</td>
+                <td>@s.Email</td>
+                <td>@s.PhoneNumber</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-outline-primary" @onclick="LoadStudents">Load More Data</button>
+
+@code {
+    List<StudentModel> students = new();
+
+    private void LoadStudents()
+    {
+        var results = data.GenerateStudents().Take(10);  
+        students.AddRange(results);
+    }
+
+    
+}

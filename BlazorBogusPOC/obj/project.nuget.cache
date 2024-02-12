@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "h9eL313X6bn9vOKw9QAiGwfFgxujpnzw848kTsXkVL/xSW4kzj7tHSva6+sG4WrMYEuV2BRFPy/aa3Vwx+rDNw==",
+  "success": true,
+  "projectFilePath": "D:\\My\\BlazorBogusPOC\\BlazorBogusPOC\\BogusDataGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jxama0\\.nuget\\packages\\bogus\\35.4.0\\bogus.35.4.0.nupkg.sha512",
+    "C:\\Users\\jxama0\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
