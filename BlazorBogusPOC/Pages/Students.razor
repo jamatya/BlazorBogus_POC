@@ -3,20 +3,28 @@
 
 <h3>Students</h3>
 
+<button type="button" class="btn btn-outline-primary" @onclick="LoadStudents">Load More Data</button>
+
 <table class="table table-striped">
     <thead>
         <tr>
             <th>Identified</th>
             <th>EqId</th>
+            <th>Image Id</th>
             <th>Full Name</th>
             <th>Date of Birth</th>
             <th>Age</th>
             <th>Gender</th>
             <th>Year Level</th>
+            <th>Roll Class</th>
             <th>Enrollment Status</th>
+            <th>Indigenous Status</th>
             <th>Has Photo</th>
             <th>Email</th>
             <th>Contact Number</th>
+            <th>MisId</th>
+            <th>Lui</th>
+            <th>Usi</th>
         </tr>
     </thead>
     <tbody>
@@ -25,22 +33,27 @@
             <tr>
                 <td>@s.Identifier</td>
                 <td>@s.EqId</td>
+                <td>@s.ImageId</td>
                 <td>@s.FullName</td>
                 <td>@s.BirthDate</td>
                 <td>@s.Age</td>
                 <td>@s.Gender</td>
                 <td>@s.YearLevel</td>
+                <td>@s.RollClass</td>
                 <td>@s.EnrollmentStatus</td>
+                <td>@s.IndigenousStatus</td>
                 <td>@s.HasPhoto</td>
                 <td>@s.Email</td>
                 <td>@s.PhoneNumber</td>
+                <td>@s.MisId</td>
+                <td>@s.Lui</td>
+                <td>@s.Usi</td>
 
             </tr>
         }
     </tbody>
 </table>
 
-<button type="button" class="btn btn-outline-primary" @onclick="LoadStudents">Load More Data</button>
 
 @code {
     List<StudentModel> students = new();
